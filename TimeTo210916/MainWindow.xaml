@@ -1,0 +1,59 @@
+﻿<Window x:Class="TimeTo210916.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeTo210916"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="400"  Background="Transparent" WindowStyle="None" AllowsTransparency="True" >
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label x:Name="remainLabel"
+               FontSize="20" FontWeight="SemiBold" Foreground="Blue"
+               HorizontalAlignment="Center">Còn</Label>
+            <!-- Days -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label x:Name="remainDaysLabel" Content="{Binding Days, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                   FontSize="30" FontWeight="SemiBold" Foreground="Red"
+                   HorizontalAlignment="Center"></Label>
+                <Label x:Name="dayLabel"
+                   FontSize="30" FontWeight="SemiBold" Foreground="BlueViolet"
+                   HorizontalAlignment="Center">Ngày</Label>
+            </StackPanel>
+            <!-- Hours -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label x:Name="remainHoursLabels" Content="{Binding Hours, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                   FontSize="30" FontWeight="SemiBold" Foreground="Red"
+                   HorizontalAlignment="Center"></Label>
+                <Label x:Name="hourLabel"
+                   FontSize="30" FontWeight="SemiBold" Foreground="BlueViolet"
+                   HorizontalAlignment="Center">Giờ</Label>
+            </StackPanel>
+            <!-- Minutes -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label x:Name="remainMinsLabels" Content="{Binding Mins, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                   FontSize="30" FontWeight="SemiBold" Foreground="Red"
+                   HorizontalAlignment="Center"></Label>
+                <Label x:Name="minLabel"
+                   FontSize="30" FontWeight="SemiBold" Foreground="BlueViolet"
+                   HorizontalAlignment="Center">Phút</Label>
+            </StackPanel>
+            <!-- Seconds -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label x:Name="remainSecsLabels" Content="{Binding Secs, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                   FontSize="30" FontWeight="SemiBold" Foreground="Red"
+                   HorizontalAlignment="Center"></Label>
+                <Label x:Name="secLabel"
+                   FontSize="30" FontWeight="SemiBold" Foreground="BlueViolet"
+                   HorizontalAlignment="Center">Giây</Label>
+            </StackPanel>
+            <!-- Event -->
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="eventLabel"
+                   FontSize="20" FontWeight="SemiBold" Foreground="Blue"
+                   HorizontalAlignment="Center">TPHCM hết giãn cách xã hội</Label>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>

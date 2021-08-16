@@ -1,0 +1,2 @@
+WindowLeft: 1564
+WindowTop: 70
